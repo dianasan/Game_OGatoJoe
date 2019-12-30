@@ -1,5 +1,5 @@
 #include "fases.h"
-
+printf("Testando envio compartilhado");
 
 SDL_Texture *carregarTextura(SDL_Renderer *render,char *pathImage){
 
