@@ -1,0 +1,5 @@
+luc 22
+kar 25
+tan 10
+jen 20
+
