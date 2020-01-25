@@ -35,7 +35,7 @@ while(!feof(arquivo)){
 	}
 	break;
 }
-
+// aqui entra um if 
 add();
 
 /*//ler o arquivo e aramzenar o último colocado
