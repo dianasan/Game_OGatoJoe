@@ -8,7 +8,7 @@ typedef struct{
 }jogador;
 
 jogador auxiliar;
-int PONTUACAO = 32;
+
 
 int main (void){
 
