@@ -8,12 +8,14 @@ typedef struct{
 }jogador;
 
 jogador auxiliar;
+int PONTUACAO = 32;
 
 int main (void){
 
 void add();
 
 jogador player[3];
+
 
 
 //criando a variável ponteiro para o arquivo 
@@ -35,22 +37,24 @@ while(!feof(arquivo)){
 	}
 	break;
 }
-// aqui entra um if 
-add();
+if (PONTUACAO > player[2].pontos){
+	add();
+	sprintf(player[2].nome, "%s", auxiliar.nome);
+		player[2].pontos = auxiliar.pontos;
+}
 
 /*//ler o arquivo e aramzenar o último colocado
 while(!feof(arquivo)){
 fscanf(arquivo,"%s %d\n", auxiliar.nome, &auxiliar.pontos);
 }
 printf("auxiliar = %s : %i\n", auxiliar.nome ,auxiliar.pontos);
-*/
+
 
 //se os pontos do auxiliar for maior que do player 3 eles trocam de lugar 
 if(player[2].pontos < auxiliar.pontos){
 		//player[3].nome = auxiliar.nome;
-		sprintf(player[2].nome, "%s", auxiliar.nome);
-		player[2].pontos = auxiliar.pontos;
-}
+		
+}*/
 
 //ordenar os jogadores 
 for(int j = 0; j < 3;j++){
@@ -90,6 +94,5 @@ void add(){
 
 printf("Digite o nome do jogador\n");
 fgets(auxiliar.nome, 4, stdin);
-//auxiliar.pontos = pontos da partida jogada 
-
+auxiliar.pontos = PONTUACAO;
 }
